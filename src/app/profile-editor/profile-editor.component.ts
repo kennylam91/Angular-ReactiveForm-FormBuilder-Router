@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Validator} from '@angular/forms';
 
 @Component({
   selector: 'app-profile-editor',
@@ -8,10 +9,10 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class ProfileEditorComponent implements OnInit {
   profileForm = this.formBuilder.group({
-    firstName: [''],
-    lastName: [''],
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
     address: this.formBuilder.group({
-      country: [''],
+      country: ['', Validators.required],
       city: [''],
       street: ['']
     })
