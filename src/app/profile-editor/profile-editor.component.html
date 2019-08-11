@@ -22,9 +22,14 @@
           <input type="text" formControlName="street"></label>
       </div>
     </div>
-    <div>
+    <div formArrayName="aliases">
       <label>Aliases:
-        <button type="submit">add Aliases</button></label>
+        <button type="submit" (click)="addAlias()">add Aliases</button>
+      </label>
+      <div *ngFor="let alias of aliases.controls; let i = index">
+        <label>alias:
+          <input type="text" [formControlName]="i"></label>
+      </div>
     </div>
     <button type="submit" [disabled]="profileForm.invalid">Submit</button>
   </form>
