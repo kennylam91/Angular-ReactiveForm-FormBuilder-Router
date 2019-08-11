@@ -7,7 +7,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./profile-editor.component.css']
 })
 export class ProfileEditorComponent implements OnInit {
-  profileForm = this.profileForm.group({
+  profileForm = this.formBuilder.group({
     firstName: [''],
     lastName: ['']
   });
