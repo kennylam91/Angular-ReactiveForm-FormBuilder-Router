@@ -16,4 +16,7 @@ export class NameEditorComponent implements OnInit {
     this.name = this.formBuilder.control(['']);
   }
 
+  updateName() {
+    this.name.setValue('Kenny');
+  }
 }
