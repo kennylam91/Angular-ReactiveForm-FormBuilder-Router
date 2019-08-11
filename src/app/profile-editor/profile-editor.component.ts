@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-profile-editor',
@@ -7,8 +7,13 @@ import {FormBuilder} from "@angular/forms";
   styleUrls: ['./profile-editor.component.css']
 })
 export class ProfileEditorComponent implements OnInit {
+  profileForm = this.profileForm.group({
+    firstName: [''],
+    lastName: ['']
+  });
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {
+  }
 
   ngOnInit() {
   }
