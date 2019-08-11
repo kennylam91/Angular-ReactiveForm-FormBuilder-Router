@@ -24,4 +24,13 @@ export class ProfileEditorComponent implements OnInit {
   ngOnInit() {
   }
 
+  updateProfile() {
+    this.profileForm.patchValue({
+      firstName: 'kenny',
+      lastName: 'lam',
+      address: {
+        country: 'Vietnam'
+      }
+    })
+  }
 }
