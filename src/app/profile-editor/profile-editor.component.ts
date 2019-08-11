@@ -9,7 +9,12 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class ProfileEditorComponent implements OnInit {
   profileForm = this.formBuilder.group({
     firstName: [''],
-    lastName: ['']
+    lastName: [''],
+    address: this.formBuilder.group({
+      country: [''],
+      city: [''],
+      street: ['']
+    })
   });
 
   constructor(private formBuilder: FormBuilder) {

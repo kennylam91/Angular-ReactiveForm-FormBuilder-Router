@@ -5,8 +5,22 @@
         <input type="text" formControlName="firstName"></label>
     </div>
     <div>
-    <label>LastName:
-      <input type="text" formControlName="lastName"></label>
+      <label>LastName:
+        <input type="text" formControlName="lastName"></label>
+    </div>
+    <div formGroupName="address">
+      <div>
+        <label>Country:
+          <input type="text" formControlName="country"></label>
+      </div>
+      <div>
+        <label>City:
+          <input type="text" formControlName="city"></label>
+      </div>
+      <div>
+        <label>Street:
+          <input type="text" formControlName="street"></label>
+      </div>
     </div>
   </form>
 </div>
