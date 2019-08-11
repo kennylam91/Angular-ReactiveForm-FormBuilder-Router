@@ -44,6 +44,6 @@ export class ProfileEditorComponent implements OnInit {
   }
 
   addAlias() {
-
+    this.aliases.push(this.formBuilder.control(''));
   }
 }
