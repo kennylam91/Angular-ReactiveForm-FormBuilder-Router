@@ -1,8 +1,8 @@
 <div>
   <label>Name:
-    <input type="text" [formControl]="name"></label>
+    <input type="text" [formControl]="name" class="form-control"></label>
+  {{name.value}}
 </div>
-{{name.value}}
 <div>
-  <button type="submit" (click)="updateName()">Update name</button>
+  <button type="submit" (click)="updateName()" class="btn btn-primary">Update name</button>
 </div>
